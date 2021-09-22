@@ -8,45 +8,34 @@ import java.util.Scanner;
 
 public class Ex7Lista3 {
 
-	public static int average(int valor, int media) {
+	public static double average(double[] vetor) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("n:");
-		valor = sc.nextInt();
-		sc.nextLine();
+		double sum = 0;
 		
-		int[] medias = new int[valor];
-		
-		for(int i=0; i<medias.length; i++) {
-			System.out.println("Media: ");
-			medias[i] = sc.nextInt();
-			sc.nextLine();
+		for(int i=0; i<vetor.length; i++) {
+			System.out.println("Inform the average: ");
+			vetor[i]+=sc.nextDouble();
 		}
 		
-		for(int i=0; i<medias.length; i++) {
-			System.out.println(medias[i]);
+		for(int i=0; i<vetor.length; i++) {
+			sum+=vetor[i];
 		}
 		
-		return 
+		return sum/vetor.length;
+		
 	}
 	
 	public static void main(String[] args) {
-		
-		int valor;
-		System.out.println("n:");
-		valor = sc.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int count = 0;
+		System.out.println("How many averages? ");
+		count = sc.nextInt();
 		sc.nextLine();
+		double[] vetor = new double[count];
 		
-		int[] medias = new int[valor];
+		System.out.println(average(vetor));
 		
-		for(int i=0; i<medias.length; i++) {
-			System.out.println("Media: ");
-			medias[i] = sc.nextInt();
-			sc.nextLine();
-		}
 		
-		for(int i=0; i<medias.length; i++) {
-			System.out.println(medias[i]);
-		}
 	}
 
 }
