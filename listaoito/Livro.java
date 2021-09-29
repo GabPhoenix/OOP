@@ -1,8 +1,8 @@
 package aulas.listaoito;
 
 public class Livro {
-	Autor autor;
-	Editora editora;
+	private Autor autor;
+	private Editora editora;
 	private int ISBN, ano_De_Edição;
 	private String titulo;
 	
